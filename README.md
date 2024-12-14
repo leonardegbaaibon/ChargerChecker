@@ -1,79 +1,90 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Charger Checker Application
 
-# Getting Started
+This is a new **Android** project, built to monitor and notify the charging state of a device using **Kotlin** or **Java**.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+---
 
-## Step 1: Start the Metro Server
+## Getting Started
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+> **Note**: Make sure you have completed the [Android Studio - Environment Setup](https://developer.android.com/studio) instructions before proceeding.
 
-To start Metro, run the following command from the _root_ of your React Native project:
-
-```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
+### Step 1: Clone the Repository
+Clone this repository to your local machine:
 
 ```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+git clone https://github.com/yourusername/charger-checker.git
+cd charger-checker
 ```
 
-### For iOS
+### Step 2: Open the Project in Android Studio
+1. Launch **Android Studio**.
+2. Select **Open an existing project**.
+3. Navigate to the cloned directory and open the project.
 
-```bash
-# using npm
-npm run ios
+### Step 3: Build the Project
+Sync and build the project:
+1. Open the `build.gradle` file at the project level.
+2. Click **Sync Now** if prompted.
+3. Make sure the dependencies are resolved correctly.
 
-# OR using Yarn
-yarn ios
-```
+### Step 4: Run the Application
+1. Connect an Android device via USB or set up an emulator.
+2. Click the **Run** button in Android Studio.
+3. Select the target device to deploy the app.
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+If everything is set up correctly, you should see the Charger Checker app running on your Android device or emulator.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+---
 
-## Step 3: Modifying your App
+## Features
+- **Charging State Detection**: Automatically detects when the charger is connected or disconnected.
+- **Real-Time Notifications**: Provides real-time notifications about the charging state.
+- **Lightweight and Efficient**: Optimized to run with minimal system resource usage.
 
-Now that you have successfully run the app, let's modify it.
+---
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+## Modifying the Application
+### Step 1: Locate Main Files
+- **Kotlin**: Check the `MainActivity.kt` file in the `src/main/java` directory.
+- **Java**: Locate the `MainActivity.java` file in the same directory.
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+### Step 2: Make Changes
+1. Modify the UI or logic in the `Activity` file.
+2. Update the `AndroidManifest.xml` file to adjust app permissions or intent filters.
 
-## Congratulations! :tada:
+### Step 3: Test Changes
+1. Rebuild and redeploy the app using the **Run** button.
+2. Test the charging state notifications by connecting and disconnecting a charger.
 
-You've successfully run and modified your React Native App. :partying_face:
+---
 
-### Now what?
+## Troubleshooting
+If the app fails to build or run, try the following:
+1. Ensure the Android SDK and Gradle are up-to-date.
+2. Check that the required permissions are added to the `AndroidManifest.xml`:
+   ```xml
+   <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+   ```
+3. Review the logs in the **Logcat** tab for any errors.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+For more help, consult the [Android Developer Documentation](https://developer.android.com/docs).
 
-# Troubleshooting
+---
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+## Learn More
+To learn more about Android development, check out these resources:
 
-# Learn More
+- [Android Developer Documentation](https://developer.android.com/docs) - learn about Android app development.
+- [Kotlin for Android Developers](https://developer.android.com/kotlin) - explore Kotlin as a language for Android.
+- [Building Android Apps](https://developer.android.com/studio/intro) - an introduction to building Android apps with Android Studio.
 
-To learn more about React Native, take a look at the following resources:
+---
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## Contributions
+Contributions are welcome! Feel free to fork this project, submit issues, or create pull requests for improvements.
+
